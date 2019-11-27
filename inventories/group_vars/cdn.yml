@@ -1,0 +1,5 @@
+---
+nfs_src: {{ nfs_server }}:/var/www/html/media/
+nfs_mount_point: /var/www/html/media/
+application: nginx
+status: present

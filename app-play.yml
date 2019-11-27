@@ -1,0 +1,6 @@
+---
+- name: app server
+  hosts: app
+  roles:
+  - install
+  - mount-nfs

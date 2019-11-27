@@ -1,0 +1,5 @@
+---
+nfs_src: {{ nfs_server }}:/var/www/html/
+nfs_mount_point: /var/www/html/
+application: apache2
+status: latest
