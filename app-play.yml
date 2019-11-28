@@ -4,3 +4,4 @@
   roles:
   - install
   - mount-nfs
+  - serv

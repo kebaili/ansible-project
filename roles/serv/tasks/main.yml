@@ -1,0 +1,6 @@
+---
+- name: service running
+  service:
+    name: {{ application }}
+    state: {{ status_service }}
+    enabled: yes

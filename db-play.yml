@@ -1,0 +1,14 @@
+---
+- name: app server
+  hosts: db1:db2
+  roles:
+  - role: install
+    vars:
+      application: {{ item }}
+    with_items:
+      - mysql-server-5.7
+      - mysql-client-5.7
+      - python-mysqldb
+      - libmysqlclient-dev
+  - config-db
+  - serv

@@ -1,0 +1,15 @@
+---
+- name: load balancer
+  hosts: lb
+  roles:
+  - install
+  - role: mount-nfs
+    vars:
+      nfs_src: {{ item.src }}
+      nfs_mount_point: {{ item.dest }}
+    with_items:
+      - { src: "{{ nfs_server }}:/var/www/html/images/",dest: "/data/images/" }
+      - { src: "{{ nfs_server }}:/var/www/html/css/",dest: "/data/css/" }
+      - { src: "{{ nfs_server }}:/var/www/html/js/",dest: "/data/js/" }
+  - config
+  - serv
