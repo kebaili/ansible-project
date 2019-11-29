@@ -3,3 +3,5 @@ nfs_src: {{ nfs_server }}:/var/www/html/media/
 nfs_mount_point: /var/www/html/media/
 application: nginx
 status_service: restart
+source_j2: nginx.conf.j2
+dest_server: 

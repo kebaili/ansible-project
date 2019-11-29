@@ -1,0 +1,5 @@
+---
+- name: copy config file
+  template:
+    src: {{ source_j2 }}
+    dest: {{ dest_server }}

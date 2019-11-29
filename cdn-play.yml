@@ -1,0 +1,8 @@
+---
+- name: content delivery network
+  hosts: cdn
+  roles:
+  - install
+  - mount-nfs
+  - config
+  - serv

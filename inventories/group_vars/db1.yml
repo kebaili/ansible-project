@@ -1,3 +1,16 @@
 ---
 application: mysql
 status_service: restarted
+proxysql_mysql_query_rules:
+  - match_pattern: "^SELECT .* FOR UPDATE$"
+    destination_hostgroup: 0
+  - match_pattern: "^SELECT"
+    destination_hostgroup: 1
+
+proxysql_mysql_servers:
+   - address: {{ groups[db1][0] }}
+     port: 3306
+     hostgroup: 0
+   - address: {{ groups[db2][0] }}
+     port: 3306
+     hostgroup: 1

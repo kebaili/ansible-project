@@ -1,0 +1,2 @@
+- src: git+ssh://git@github.com/leucos/ansible-proxysql.git
+  version: origin/master
