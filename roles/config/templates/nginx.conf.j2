@@ -1,1 +1,9 @@
-nginx
+server {
+  listen 443;
+  server_name cdn.futalis.com;
+
+  location / {
+    expires 90d;
+    root {{ nfs_mount_point }};
+  }
+}

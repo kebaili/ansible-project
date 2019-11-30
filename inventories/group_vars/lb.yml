@@ -2,4 +2,7 @@
 application: haproxy
 status_service: restarted
 source_j2: haproxy.conf.j2
-dest_server: 
+dest_server: /etc/haproxy/haproxy.cfg
+css_path: /data/css/
+js_path: /data/js/
+images_path: /data/images/
