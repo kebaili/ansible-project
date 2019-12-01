@@ -1,4 +1,4 @@
 ---
 nfs_server: 10.0.0.4
-ansible_user: sysadmin
+ansible_user: root
 ansible_password: sysadmin
